@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+   "tutorialmod:mythril_block",
+   "tutorialmod:mythril_ore",
+   "tutorialmod:deepslate_mythril",
+   "tutorialmod:netherrack_mythril",
+   "tutorialmod:raw_mythril_block"
+  ]
+}
