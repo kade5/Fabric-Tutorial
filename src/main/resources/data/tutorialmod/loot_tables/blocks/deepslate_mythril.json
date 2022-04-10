@@ -25,7 +25,7 @@
                   }
                 }
               ],
-              "name": "tutorialmod:mythril_ore"
+              "name": "tutorialmod:deepslate_mythril"
             },
             {
               "type": "minecraft:item",
@@ -48,7 +48,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "tutorialmod:deepslate_mythril"
+              "name": "tutorialmod:raw_mythril"
             }
           ]
         }
