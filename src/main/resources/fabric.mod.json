@@ -20,6 +20,8 @@
   "entrypoints": {
     "main": [
       "net.zeke5.tutorialmod.TutorialMod"
+    ],
+    "client": ["net.zeke5.tutorialmod.TutorialClientMod"
     ]
   },
   "mixins": [
