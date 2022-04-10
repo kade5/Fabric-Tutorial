@@ -48,7 +48,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "tutorialmod:mythril_ore"
+              "name": "tutorialmod:raw_mythril"
             }
           ]
         }

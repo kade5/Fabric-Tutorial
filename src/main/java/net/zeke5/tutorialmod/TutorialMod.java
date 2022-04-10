@@ -3,6 +3,7 @@ package net.zeke5.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 import net.zeke5.tutorialmod.block.ModBlocks;
 import net.zeke5.tutorialmod.item.ModItems;
+import net.zeke5.tutorialmod.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModRegistries.registerModStuffs();
 	}
 }

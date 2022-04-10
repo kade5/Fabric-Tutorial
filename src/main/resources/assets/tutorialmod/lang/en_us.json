@@ -3,12 +3,14 @@
   "item.tutorialmod.mythril_nugget": "Mythril_Nugget",
   "item.tutorialmod.raw_mythril": "Raw Mythril",
   "item.tutorialmod.dowsing_rod": "Dowsing Rod",
+  "item.tutorialmod.lilac_flower_bulb": "Lilac Flower Bulb",
 
   "block.tutorialmod.mythril_block": "Mythril Block",
   "block.tutorialmod.mythril_ore": "Mythril Ore",
   "block.tutorialmod.deepslate_mythril": "Deepslate Mythril Ore",
   "block.tutorialmod.netherrack_mythril": "Netherrack Mythril Ore",
   "block.tutorialmod.raw_mythril_block": "Raw Mythril Block",
+  "block.tutorialmod.speedy_block": "Speedy Block",
 
   "itemGroup.tutorialmod.mythril": "Mythril Tutorial Tab",
 
