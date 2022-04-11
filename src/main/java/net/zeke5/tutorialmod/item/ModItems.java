@@ -7,10 +7,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.zeke5.tutorialmod.TutorialMod;
-import net.zeke5.tutorialmod.item.custom.DowsingRodItem;
-import net.zeke5.tutorialmod.item.custom.ModAxeItem;
-import net.zeke5.tutorialmod.item.custom.ModHoeItem;
-import net.zeke5.tutorialmod.item.custom.ModPickaxeItem;
+import net.zeke5.tutorialmod.item.custom.*;
 
 public class ModItems {
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
@@ -32,11 +29,11 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_SWORD = registerItem("mythril_sword",
-            new SwordItem(ModToolMaterials.MYTHRIL, 1, 2f,
+            new ModSlownessSwordItem(ModToolMaterials.MYTHRIL, 1, 1f,
                     new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_AXE = registerItem("mythril_axe",
-            new ModAxeItem(ModToolMaterials.MYTHRIL, 3, 1f,
+            new ModAxeItem(ModToolMaterials.MYTHRIL, 3, 3f,
                     new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_HOE = registerItem("mythril_hoe",
@@ -48,8 +45,12 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
 
     public static final Item MYTHRIL_PICKAXE = registerItem("mythril_pickaxe",
-            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 1, 1f,
+            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 1, 3f,
                     new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
+    public static final Item MAGIC_MYTHRIL_DUST = registerItem("magic_mythril_dust",
+            new Item(new FabricItemSettings().group(ModItemGroup.MYTHRIL)));
+
 
 
 
