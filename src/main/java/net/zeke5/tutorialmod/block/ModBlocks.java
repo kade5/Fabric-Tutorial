@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import net.zeke5.tutorialmod.TutorialMod;
 import net.zeke5.tutorialmod.block.custom.SpeedyBlock;
 import net.zeke5.tutorialmod.item.ModItemGroup;
+import net.zeke5.tutorialmod.item.custom.MythrilLampBlock;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -47,6 +48,10 @@ public class ModBlocks {
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroup.MYTHRIL,
             "tooltip.tutorialmod.speedy_block");
+
+    public static final Block MYTHRIL_LAMP = registerBlock("mythril_lamp",
+            new MythrilLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(
+                    (state) -> state.get(MythrilLampBlock.CLICKED) ? 15 : 0)), ModItemGroup.MYTHRIL);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
