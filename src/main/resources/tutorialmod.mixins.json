@@ -4,6 +4,7 @@
   "package": "net.zeke5.tutorialmod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ModEntityDataSaver"
   ],
   "client": [
     "ExampleMixin"
