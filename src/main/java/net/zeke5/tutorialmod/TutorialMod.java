@@ -2,6 +2,7 @@ package net.zeke5.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.zeke5.tutorialmod.block.ModBlocks;
+import net.zeke5.tutorialmod.effect.ModEffects;
 import net.zeke5.tutorialmod.item.ModItems;
 import net.zeke5.tutorialmod.util.ModLootTableModifiers;
 import net.zeke5.tutorialmod.util.ModRegistries;
@@ -29,5 +30,7 @@ public class TutorialMod implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 
 		ModLootTableModifiers.modifyLootTables();
+
+		ModEffects.registerEffects();
 	}
 }
