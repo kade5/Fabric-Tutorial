@@ -2,10 +2,7 @@ package net.zeke5.tutorialmod.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,7 +16,9 @@ import net.minecraft.world.World;
 import net.zeke5.tutorialmod.TutorialMod;
 import net.zeke5.tutorialmod.block.custom.SpeedyBlock;
 import net.zeke5.tutorialmod.item.ModItemGroup;
+import net.zeke5.tutorialmod.item.custom.ModSaplingBlock;
 import net.zeke5.tutorialmod.item.custom.MythrilLampBlock;
+import net.zeke5.tutorialmod.world.feature.tree.JacarandaSaplingGenerator;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -69,6 +68,13 @@ public class ModBlocks {
 
     public static final Block JACARANDA_PLANKS = registerBlock("jacaranda_planks",
             new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block JACARANDA_LEAVES = registerBlock("jacaranda_leaves",
+            new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()), ModItemGroup.MYTHRIL);
+
+    public static final Block JACARANDA_SAPLING = registerBlock("jacaranda_sapling",
+            new ModSaplingBlock(new JacarandaSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.MYTHRIL);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import net.zeke5.tutorialmod.block.ModBlocks;
 import net.zeke5.tutorialmod.item.ModItems;
 import net.zeke5.tutorialmod.util.ModRegistries;
+import net.zeke5.tutorialmod.world.feature.ModConfiguredFeatures;
+import net.zeke5.tutorialmod.world.feature.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,9 +18,13 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfiguredFeatures.registerConfiguredFeatures();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
 		ModRegistries.registerModStuffs();
+
+		ModWorldGen.generateModWorldGen();
 	}
 }
