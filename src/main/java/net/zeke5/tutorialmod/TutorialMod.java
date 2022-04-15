@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.zeke5.tutorialmod.block.ModBlocks;
 import net.zeke5.tutorialmod.effect.ModEffects;
 import net.zeke5.tutorialmod.item.ModItems;
+import net.zeke5.tutorialmod.potion.ModPotions;
 import net.zeke5.tutorialmod.util.ModLootTableModifiers;
 import net.zeke5.tutorialmod.util.ModRegistries;
 import net.zeke5.tutorialmod.world.feature.ModConfiguredFeatures;
@@ -32,5 +33,6 @@ public class TutorialMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotion();
 	}
 }
