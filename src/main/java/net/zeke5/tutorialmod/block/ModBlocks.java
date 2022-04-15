@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.zeke5.tutorialmod.TutorialMod;
@@ -31,8 +32,8 @@ public class ModBlocks {
             "tooltip.tutorialmod.mythril_block");
 
     public static final Block MYTHRIL_ORE = registerBlock("mythril_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroup.MYTHRIL,
-            "tooltip.tutorialmod.mythril_ore");
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(), UniformIntProvider.create(2, 6)),
+            ModItemGroup.MYTHRIL);
 
     public static final Block DEEPSLATE_MYTHRIL = registerBlock("deepslate_mythril",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroup.MYTHRIL,
