@@ -1,7 +1,6 @@
 package net.zeke5.tutorialmod.item.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.zeke5.tutorialmod.item.ModItems;
 import net.zeke5.tutorialmod.util.InventoryUtil;
@@ -86,6 +86,6 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+        return Registry.BLOCK.getOrCreateEntry(Registry.BLOCK.getKey(block).get()).isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
     }
 }

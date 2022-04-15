@@ -3,7 +3,9 @@ package net.zeke5.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -52,6 +54,21 @@ public class ModBlocks {
     public static final Block MYTHRIL_LAMP = registerBlock("mythril_lamp",
             new MythrilLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool().luminance(
                     (state) -> state.get(MythrilLampBlock.CLICKED) ? 15 : 0)), ModItemGroup.MYTHRIL);
+
+    public static final Block JACARANDA_LOG = registerBlock("jacaranda_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block JACARANDA_WOOD = registerBlock("jacaranda_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block STRIPPED_JACARANDA_LOG = registerBlock("stripped_jacaranda_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block STRIPPED_JACARANDA_WOOD = registerBlock("stripped_jacaranda_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
+
+    public static final Block JACARANDA_PLANKS = registerBlock("jacaranda_planks",
+            new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ModItemGroup.MYTHRIL);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
